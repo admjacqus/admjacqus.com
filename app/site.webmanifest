@@ -1,0 +1,14 @@
+{
+    "name": "adm_jacqus",
+    "short_name": "adm_jacqus",
+    "icons": [
+        {
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#f5adba",
+    "background_color": "#f5adba",
+    "display": "standalone"
+}
