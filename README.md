@@ -7,21 +7,15 @@ Quick site for the porttolio.
 
  - Assets (JS, SASS) should be stored in the `src/` directory.
  
- - Assets are combined and minified and stored for use in `web/dist/` - files here should not be modified as they will be overwritten.
+ - Assets are combined and minified and stored for use in `/dist/` - files here should not be modified as they will be overwritten.
 
  - NPM packages should be installed before developing within the project, run `npm install` to do this. 
  
  - Gulp and live-server should be installed globally by running `npm install -g gulp live-server`
 
- - To build the assets run `gulp` in the root directory of the project. To watch files and build when files change run `gulp watch`
- 
- - To start the live reload server, simply run `npm start`
- 
- - `web/` is the document root for the project, web servers should point to this directory.
+ - To build the assets run and start the live server `gulp` in the root directory of the project.
 
- - HTML files should be contained under `web/` -> `web/index.html` is the default homepage.
-
- - Images should be stored under `web/images/`
+ - Images should be stored under `/images/`
 
 ## License ##
 
