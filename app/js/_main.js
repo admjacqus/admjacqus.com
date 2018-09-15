@@ -1,9 +1,9 @@
 $('nav.big-menu li a').hover(
     function () {
         //we get our current filename and use it for the src
-        const linkIndex = $(this).attr("data-filename");
+        var linkIndex = $(this).attr("data-filename");
         $(this).addClass('hover');
-        $('#menu-preview').attr('src', `images/${linkIndex}.jpg`);
+        $('#menu-preview').attr('src', 'images/' + linkIndex + '.jpg');
     },
     function () {
         $(this).removeClass('hover');
@@ -14,10 +14,10 @@ $('nav.big-menu li a').hover(
 $('section.sites ul li a:not(.link)').hover(
     function () {
         //we get our current filename and use it for the src
-        const linkIndex = $(this).attr("data-filename");
+        var linkIndex = $(this).attr("data-filename");
         $('section.sites ul li a:not(.link)').removeClass('active');
         $(this).addClass('active');
-        $('#site-preview').attr('src', `images/sites/${linkIndex}.jpeg`);
+        $('#site-preview').attr('src', 'images/sites/' + linkIndex + '.jpeg');
         $('#modal').removeClass("site1 site2 site3 site4 site5 site6").addClass(linkIndex);
 
         // $('#modal').attr('class', linkIndex);
@@ -37,7 +37,7 @@ $.cloudinary.responsive();
 //     ];
 //     document.getElementById("random").style.backgroundImage = bigSize[random];
 // }
-let is_mobile = false;
+var is_mobile = false;
 
 function checkMob() {
 
@@ -46,34 +46,34 @@ function checkMob() {
     }
 
 }
-$(document).ready(() => {
+$(document).ready(function () {
     checkMob();
     $('#DVD').DVDBounce();
 });
 
-$(".hi").click(() => {
+$(".hi").click(function () {
     // alert("Handler for .click() called.");
     $('.window').toggleClass("active");
     $('a#close').toggleClass("active");
 });
 
 $.fn.isInViewport = function () {
-    const elementTop = $(this).offset().top;
-    const elementBottom = elementTop + $(this).outerHeight();
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
 
-    const viewportTop = $(window).scrollTop();
-    const viewportBottom = viewportTop + $(window).height();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
 
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
 
-const inSites = false;
-const sites = $('#sites');
-const sitePrv = $('#site-preview');
-const sitesOffset = sites.offset();
+var inSites = false,
+    sites = $('#sites'),
+    sitePrv = $('#site-preview'),
+    sitesOffset = sites.offset();
 
-$(window).on('resize scroll', e => {
+$(window).on('resize scroll', function (e) {
     checkMob();
 
     if (is_mobile == true) {
