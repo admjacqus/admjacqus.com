@@ -4,12 +4,14 @@ $blue: #2C35FF;
 $lb: #D4C48E;
 $db: #A06D2C;
 $red: #EF312D;
+
 body {
   // font-family: "termina", sans-serif;
   font-family: "antique-olive-nord", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-style: normal;
   font-size: 12px;
   color: $black;
+
   * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -47,6 +49,7 @@ li {
 a {
   color: $red;
   transition: color ease 300ms;
+
   &:hover,
   &.active {
     text-decoration: underline;
@@ -80,9 +83,11 @@ img {
 
 .flex {
   display: flex;
+
   &.down {
     flex-direction: column;
   }
+
   &.across {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -92,6 +97,7 @@ img {
 header {
   text-align: right;
   padding: 1em;
+
   h1 {
     font-size: 5vw;
     text-transform: uppercase; // color: white;
@@ -101,21 +107,26 @@ header {
 
 nav.big-menu {
   height: 100%;
+
   ul {
     height: 100%;
     list-style-type: none;
     @extend .flex;
     flex-direction: column;
     justify-content: flex-end;
+
     li {
+
       p,
       a {
         text-decoration: none;
       }
+
       p {
         color: white;
         letter-spacing: 0ch;
         transition: letter-spacing ease 100ms;
+
         &:hover {
           letter-spacing: .5px;
         }
@@ -129,9 +140,11 @@ section {
   height: auto;
   padding: 2em 0;
   color: $black;
+
   &.landing {
     min-height: 100vh;
     background: $lb;
+
     img {
       width: auto;
       height: auto;
@@ -140,32 +153,39 @@ section {
       max-height: 500px;
     }
   }
+
   &.sites {
     // background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
     padding: 0 1em 5%;
     min-height: 100vh;
+
     .wrap {
       display: flex;
       align-items: flex-end;
       min-height: 88vh;
+
       img {
         max-width: 70vw;
         padding: 0;
       }
     }
+
     ul.top {
       position: absolute;
       list-style: square;
+
       li {
         font-size: 14px;
       }
     }
+
     img {
       height: auto;
       width: auto;
       max-height: 70vh;
     }
   }
+
   &.design {
     background: $black;
     color: $lb;
@@ -174,9 +194,11 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .flex {
       width: 100px;
       justify-content: space-around;
+
       svg {
         width: 30px;
         height: 30px;
@@ -184,6 +206,7 @@ section {
       }
     }
   }
+
   &.personal {
     display: none;
   }
@@ -203,35 +226,42 @@ section {
     height: 0;
     z-index: 1;
     background: rgba(255, 255, 255, .5);
+
     a.link {
       color: $red;
     }
   }
+
   &.site1 {
     div.site1 {
       @extend .open;
     }
   }
+
   &.site2 {
     div.site2 {
       @extend .open;
     }
   }
+
   &.site3 {
     div.site3 {
       @extend .open;
     }
   }
+
   &.site4 {
     div.site4 {
       @extend .open;
     }
   }
+
   &.site5 {
     div.site5 {
       @extend .open;
     }
   }
+
   &.site6 {
     div.site6 {
       @extend .open;
@@ -242,9 +272,11 @@ section {
 .gallery-headers {
   @extend .flex;
   padding: 1em;
+
   h3 {
     flex: 250px 1 0;
   }
+
   p {
     text-align: right; // color: white;
   }
@@ -265,9 +297,11 @@ section {
   padding: 0;
   z-index: 9;
   overflow: hidden;
+
   &.active {
     transform: translateY(0%);
   }
+
   img {
     position: absolute;
     top: 15%;
@@ -286,10 +320,12 @@ a#close {
   height: 30px;
   cursor: pointer;
   z-index: 11;
+
   &:hover {
     text-decoration: none;
     color: lighten(black, 10%);
   }
+
   span {
     display: block;
     width: 100%;
@@ -301,11 +337,13 @@ a#close {
     transition: .3s ease;
     z-index: 2;
     background-color: #000;
+
     &:nth-child(2) {
       transform: rotate(-90deg) translateX(-50%);
       top: -3px;
     }
   }
+
   &.active {
     span:nth-child(2) {
       background-color: transparent;
@@ -325,6 +363,7 @@ a#close {
       font-size: 10vw;
     }
   }
+
   #random {
     width: 90%;
     height: 75vh;
@@ -351,11 +390,13 @@ a#close {
     justify-content: center;
     margin-top: 20vh;
     min-height: 0;
+
     img {
       max-width: 90vw;
       margin-bottom: 1em;
     }
   }
+
   .window img {
     left: 15%;
     height: auto;
@@ -369,18 +410,22 @@ a#close {
   .on-mob {
     display: block;
   }
+
   .on-desk {
     display: none;
   }
+
   body {
     width: 100%;
   }
+
   #modal {
     z-index: 1;
     height: calc((100vh + 50em) * 7);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     div {
       opacity: 1;
       margin-top: 50em;
@@ -394,19 +439,24 @@ a#close {
       justify-content: center;
       align-items: center;
     }
+
     h5 {
       font-size: 5vw;
     }
   }
+
   section.landing {
     background: white;
   }
+
   section.sites {
     position: relative;
     padding: 2em 1em;
     color: $black;
+
     img#site-preview {
       display: none;
+
       &.active {
         // opacity: .2;
         max-width: 100vw;
@@ -418,6 +468,7 @@ a#close {
         pointer-events: none;
       }
     }
+
     ul.top {
       display: none;
     }
