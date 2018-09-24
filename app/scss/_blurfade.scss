@@ -1,0 +1,182 @@
+.layer-navigation {
+
+    font-size: 1.8vw;
+    line-height: 1.45em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 4;
+    overflow: hidden;
+    -moz-transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 2000ms;
+    -ms-transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 2000ms;
+    -webkit-transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 2000ms;
+    transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 2000ms;
+    left: -5vw;
+    /* opacity: 0; */
+}
+
+// @media (max-width: 1050px) {
+//     .layer-navigation {
+//         font-family: "Roboto", "Karla", Helvetica, Arial, sans-serif;
+//         font-size: 20px;
+//         line-height: 1.36em;
+//     }
+// }
+
+@media (max-width: 1050px) {
+    .layer-navigation {
+        position: fixed;
+        opacity: 1;
+        width: auto;
+        right: 0;
+        left: 0;
+        background: radial-gradient(ellipse at -15vw -50vw, #ebc1c1 0%, rgba(255, 255, 255, 0) 100%);
+        -moz-animation: gradient 5000ms infinite;
+        -ms-animation: gradient 5000ms infinite;
+        -webkit-animation: gradient 5000ms infinite;
+        animation: gradient 5000ms infinite;
+    }
+}
+
+@-moz-keyframes gradient {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@-ms-keyframes gradient {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@-webkit-keyframes gradient {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.layer-navigation.moved {
+    opacity: 1;
+}
+
+.layer-navigation:after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+    width: 25vw;
+}
+
+@media (max-width: 1050px) {
+    .layer-navigation:after {
+        display: none;
+    }
+}
+
+.layer-navigation:before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    width: 25vw;
+    z-index: 4;
+}
+
+@media (max-width: 1050px) {
+    .layer-navigation:before {
+        display: none;
+    }
+}
+
+.gradient {
+    position: absolute;
+    -moz-transition: -webkit-filter 1200ms, top 1200ms, left 1200ms, right 1200ms, bottom 1200ms;
+    -ms-transition: -webkit-filter 1200ms, top 1200ms, left 1200ms, right 1200ms, bottom 1200ms;
+    -webkit-transition: -webkit-filter 1200ms, top 1200ms, left 1200ms, right 1200ms, bottom 1200ms;
+    transition: -webkit-filter 1200ms, top 1200ms, left 1200ms, right 1200ms, bottom 1200ms;
+}
+
+.gradient-1 {
+    width: 150vw;
+    height: 70vw;
+    bottom: -35vw;
+    left: -25vw;
+    background: radial-gradient(ellipse at bottom center, RGBA(30, 199, 103, 0.7) 0%, RGBA(255, 255, 255, 0) 50%);
+}
+
+.gradient-2 {
+    width: 100vw;
+    height: 110vw;
+    bottom: -50vw;
+    left: 0vw;
+    background: radial-gradient(ellipse at center left, RGBA(113, 131, 237, 1) 0%, RGBA(255, 255, 255, 0) 50%);
+}
+
+.gradient-3 {
+    width: 100vw;
+    height: 200vw;
+    bottom: -50vw;
+    left: 0;
+    background: radial-gradient(ellipse at center right, RGBA(250, 140, 182, 1) 0%, RGBA(255, 255, 255, 0) 50%);
+}
+
+.marks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.mark {
+    position: absolute;
+    cursor: default;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 200px;
+    height: 200px;
+    font-size: 2.5vw;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    background: radial-gradient(ellipse at center center, RGBA(255, 255, 255, 0.6) 0%, RGBA(255, 255, 255, 0) 50%);
+    mix-blend-mode: overlay;
+    -moz-animation: markFadeOut 5000ms;
+    -ms-animation: markFadeOut 5000ms;
+    -webkit-animation: markFadeOut 5000ms;
+    animation: markFadeOut 5000ms;
+    opacity: 0;
+}

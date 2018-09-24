@@ -1,9 +1,4 @@
-$black: #55504A;
-$white: #E7E2DE;
-$blue: #2C35FF;
-$lb: #D4C48E;
-$db: #A06D2C;
-$red: #EF312D;
+@import "vars.scss";
 
 body {
   // font-family: "termina", sans-serif;
@@ -20,6 +15,9 @@ body {
   }
 }
 
+@import "typography.scss";
+@import "blurfade.scss";
+
 #random {
   width: 90%;
   height: 75vh;
@@ -28,49 +26,6 @@ body {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-h1 {
-  font-weight: 900;
-}
-
-h2,
-h3,
-h4 {
-  font-weight: 700;
-}
-
-h5,
-p,
-li {
-  font-weight: 400;
-}
-
-a {
-  color: $red;
-  transition: color ease 300ms;
-
-  &:hover,
-  &.active {
-    text-decoration: underline;
-    color: $blue;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  cursor: default;
-}
-
-p.code {
-  font-family: fira-mono, monospace;
-  font-style: normal;
-  font-weight: 400;
-  color: $blue;
 }
 
 img {
