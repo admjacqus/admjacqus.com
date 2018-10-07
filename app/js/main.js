@@ -11,18 +11,18 @@ $('nav.big-menu li a').hover(
     }
 );
 
-$('section.sites ul li a:not(.link)').hover(
-    function () {
-        //we get our current filename and use it for the src
-        const linkIndex = $(this).attr("data-filename");
-        $('section.sites ul li a:not(.link)').removeClass('active');
-        $(this).addClass('active');
-        $('#site-preview').attr('src', `images/sites/${linkIndex}.jpeg`);
-        $('#modal').removeClass("site1 site2 site3 site4 site5 site6").addClass(linkIndex);
+// $('section.sites ul li a:not(.link)').hover(
+//     function () {
+//         //we get our current filename and use it for the src
+//         const linkIndex = $(this).attr("data-filename");
+//         $('section.sites ul li a:not(.link)').removeClass('active');
+//         $(this).addClass('active');
+//         $('#site-preview').attr('src', `images/sites/${linkIndex}.jpeg`);
+//         $('#modal').removeClass("site1 site2 site3 site4 site5 site6").addClass(linkIndex);
 
-        // $('#modal').attr('class', linkIndex);
-    }
-);
+//         // $('#modal').attr('class', linkIndex);
+//     }
+// );
 
 $.cloudinary.responsive();
 
@@ -48,7 +48,7 @@ function checkMob() {
 }
 $(document).ready(() => {
     checkMob();
-    $('#DVD').DVDBounce();
+    // $('#DVD').DVDBounce();
 });
 
 $(".hi").click(() => {
@@ -76,33 +76,33 @@ const sitesOffset = sites.offset();
 $(window).on('resize scroll', e => {
     checkMob();
 
-    if (is_mobile == true) {
-        if ($('.site1').isInViewport()) {
-            $('#site-preview').attr('src', '/images/sites/site1mb.jpeg');
-            console.log("image 1");
-        }
-        if ($('.site2').isInViewport()) {
-            $('#site-preview').attr('src', '/images/sites/site2m.jpeg');
-        }
-        if ($('.site3').isInViewport()) {
-            $('#site-preview').attr('src', '/images/sites/site3m.jpeg');
-        }
-        if ($('.site4').isInViewport()) {
-            $('#site-preview').attr('src', '/images/sites/site4m.jpeg');
-        }
-        if ($('.site5').isInViewport()) {
-            $('#site-preview').attr('src', '/images/sites/site5m.jpeg');
-        }
-        if ($('.site6').isInViewport()) {
-            $('#site-preview').attr('src', '/images/sites/site6m.jpeg');
-        }
-        if ($('.sites').isInViewport()) {
-            sitePrv.addClass("active");
-        } else {
-            sitePrv.removeClass("active");
-            $('#site-preview').attr('src', '');
-        }
-    }
+    // if (is_mobile == true) {
+    //     if ($('.site1').isInViewport()) {
+    //         $('#site-preview').attr('src', '/images/sites/site1mb.jpeg');
+    //         console.log("image 1");
+    //     }
+    //     if ($('.site2').isInViewport()) {
+    //         $('#site-preview').attr('src', '/images/sites/site2m.jpeg');
+    //     }
+    //     if ($('.site3').isInViewport()) {
+    //         $('#site-preview').attr('src', '/images/sites/site3m.jpeg');
+    //     }
+    //     if ($('.site4').isInViewport()) {
+    //         $('#site-preview').attr('src', '/images/sites/site4m.jpeg');
+    //     }
+    //     if ($('.site5').isInViewport()) {
+    //         $('#site-preview').attr('src', '/images/sites/site5m.jpeg');
+    //     }
+    //     if ($('.site6').isInViewport()) {
+    //         $('#site-preview').attr('src', '/images/sites/site6m.jpeg');
+    //     }
+    //     if ($('.sites').isInViewport()) {
+    //         sitePrv.addClass("active");
+    //     } else {
+    //         sitePrv.removeClass("active");
+    //         $('#site-preview').attr('src', '');
+    //     }
+    // }
 
 
 });
