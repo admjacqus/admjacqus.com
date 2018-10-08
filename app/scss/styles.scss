@@ -10,6 +10,10 @@ body {
   width: 100%;
   overflow-x: hidden;
 
+  scroll-snap-type: y mandatory;
+  overflow-x: scroll;
+  // display: flex;
+
   * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -144,6 +148,8 @@ section {
   height: 100vh;
   padding: 2em 0;
   color: $black;
+
+  scroll-snap-align: center;
 
   &.landing {
     background: $lb;
