@@ -6,13 +6,9 @@ body {
   font-style: normal;
   font-size: 12px;
   color: $black;
-
   width: 100%;
-  overflow-x: hidden;
-
   scroll-snap-type: y mandatory;
   overflow-x: scroll;
-  // display: flex;
 
   * {
     box-sizing: border-box;
@@ -22,26 +18,19 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
-  body {
-    max-width: 1200px;
-    display: block;
-    margin: 0 auto;
-
-  }
-}
-
 @import "typography.scss";
 @import "blurfade.scss";
 
 #random {
+  display: none;
+
   width: 60%;
   height: 85vh;
   margin: 0 auto;
-  background-image: url(http://res.cloudinary.com/dsvt6q8vh/image/upload/w_900/v1527553415/2.jpg);
-  background-position: center 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
+
+  img {
+    width: 100%;
+  }
 }
 
 img {
@@ -71,15 +60,15 @@ header {
 
   h1 {
     font-size: 5vw;
-    text-transform: uppercase; // color: white;
-    // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-transform: uppercase;
   }
 }
 
 .spin-container {
   position: absolute;
-  left: 5%;
-  top: 5%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   height: 50vh;
   width: 50vh;
   max-width: 400px;
@@ -89,8 +78,7 @@ header {
     width: 100%;
     height: 100%;
     position: absolute;
-    // fill: $db;
-    fill: $blue;
+    fill: white;
 
     &.big {
       animation: spin 48000ms linear 1000ms infinite reverse forwards
@@ -149,10 +137,11 @@ section {
   padding: 2em 0;
   color: $black;
 
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 
   &.landing {
-    background: $lb;
+    background: $blue;
+
 
     img {
       width: auto;
@@ -164,59 +153,37 @@ section {
   }
 
   &.sites {
-    // background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
-    padding: 0 1em 5%;
-    min-height: 100vh;
-    margin-bottom: 5%;
+    padding: 1em;
+    height: 100vh;
+    background: grey;
 
     .wrap {
-      min-height: 100vh;
-
-      img {
-        max-width: 80%;
-        padding: 0;
-      }
-    }
-
-    $scrollBarHeight: 1px;
-    $siteWidth: 600px;
-
-    ::-webkit-scrollbar {
-      width: $scrollBarHeight;
-      height: $scrollBarHeight;
-    }
-
-    ::-webkit-scrollbar-button {
-      width: $scrollBarHeight;
-      height: $scrollBarHeight;
+      width: 100vw;
+      overflow: hidden;
     }
 
     .horizontal-scroll-wrapper {
-      width: $siteWidth;
-      height: 100vw;
-      overflow-y: auto;
-      overflow-x: hidden;
+      display: flex;
+      flex-wrap: nowrap;
+
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
 
       &>div {
-        width: $siteWidth;
-        height: $siteWidth;
-        transform: rotate(90deg);
-        transform-origin: right top;
+        background: white;
+        scroll-snap-align: start;
 
-        padding: 0 5%;
+        // flex: 70vw 1 0;
+        flex: 500px 1 0;
+        max-width: 600px;
+        height: 600px;
+        margin-right: 2em;
 
-        &:first-of-type {
-          margin-top: $siteWidth;
-        }
 
         img {
-          width: 90%;
+          width: 100%;
         }
       }
-
-      transform: rotate(-90deg);
-      transform-origin: right top;
-      transform:rotate(-90deg) translateY(-$siteWidth);
     }
 
     img {
@@ -226,61 +193,46 @@ section {
     }
   }
 
-  @media (max-width: 2200px) and (min-width: 960px) {
-    &.sites .horizontal-scroll-wrapper {
-      width: 800px;
+  // @media (max-width: 2200px) and (min-width: 960px) {
+  //   &.sites .horizontal-scroll-wrapper {
+  //     &>div {
+  //       width: 800px;
+  //       height: 800px;
 
-      &>div {
-        width: 800px;
-        height: 800px;
+  //     }
+  //   }
+  // }
 
-        &:first-of-type {
-          margin-top: 800px;
-        }
-      }
+  // @media (max-width: 960px) and (min-width: 768px) {
 
-      transform:rotate(-90deg) translateY(-800px);
-    }
-  }
+  //   // $siteWidth: 400px;
+  //   &.sites .horizontal-scroll-wrapper {
 
-  @media (max-width: 960px) and (min-width: 768px) {
 
-    // $siteWidth: 400px;
-    &.sites .horizontal-scroll-wrapper {
-      width: 400px;
+  //     &>div {
+  //       width: 400px;
+  //       height: 400px;
 
-      &>div {
-        width: 400px;
-        height: 400px;
 
-        &:first-of-type {
-          margin-top: 400px;
-        }
-      }
+  //     }
 
-      transform:rotate(-90deg) translateY(-400px);
-    }
-  }
+  //   }
+  // }
 
-  @media (max-width: 768px) {
+  // @media (max-width: 768px) {
 
-    // $siteWidth: 300px;
-    &.sites .horizontal-scroll-wrapper {
-      width: 500px;
-      height: 1000px;
+  //   // $siteWidth: 300px;
+  //   &.sites .horizontal-scroll-wrapper {
 
-      &>div {
-        width: 500px;
-        height: 500px;
 
-        &:first-of-type {
-          margin-top: 500px;
-        }
-      }
+  //     &>div {
+  //       width: 500px;
+  //       height: 500px;
 
-      transform:rotate(-90deg) translateY(-500px);
-    }
-  }
+  //     }
+
+  //   }
+  // }
 
   &.design {
     background: $black;
@@ -303,8 +255,8 @@ section {
     }
   }
 
-  &.personal {
-    display: none;
+  &.contact {
+    height: auto;
   }
 }
 
@@ -452,10 +404,6 @@ a#close {
 
   .on-desk {
     display: none;
-  }
-
-  section.landing {
-    background: white;
   }
 
   section.sites {
