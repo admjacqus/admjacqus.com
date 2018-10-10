@@ -1,5 +1,4 @@
 .layer-navigation {
-
     font-size: 1.8vw;
     line-height: 1.45em;
     position: fixed;
@@ -150,7 +149,7 @@
     pointer-events: none;
 }
 
-.mark {
+.marks {
     position: absolute;
     cursor: default;
     -moz-transform: translate(-50%, -50%);
@@ -166,6 +165,7 @@
     font-weight: 500;
     background: radial-gradient(ellipse at center center, RGBA(255, 255, 255, 0.6) 0%, RGBA(255, 255, 255, 0) 50%);
     mix-blend-mode: overlay;
+
     -moz-animation: markFadeOut 5000ms;
     -ms-animation: markFadeOut 5000ms;
     -webkit-animation: markFadeOut 5000ms;

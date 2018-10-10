@@ -25,6 +25,7 @@ body {
 
 @import "typography.scss";
 @import "blurfade.scss";
+@import "grid.scss";
 
 #random {
   display: none;
@@ -141,7 +142,6 @@ section {
   height: 100vh;
   padding: 2em 0;
   color: $black;
-
   scroll-snap-align: start;
 
   &.landing {
