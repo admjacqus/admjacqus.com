@@ -9,15 +9,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
 }
-
-.random {
-  width: 100%;
-  object-position: center;
-  object-fit: contain;
-  
-}
-@import "typography.scss";
-
 img {
   width: auto;
   height: auto;
@@ -25,8 +16,14 @@ img {
   max-width: 100%;
   max-height: 80vh;
 }
-
-
+.random {
+  width: 100%;
+  object-position: center;
+  object-fit: contain;
+  
+}
+@import "_vars.scss";
+@import "typography.scss";
 @import "flex.scss";
 @import "nav.scss";
 @import "section.scss";
