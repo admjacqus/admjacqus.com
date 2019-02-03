@@ -1,0 +1,40 @@
+
+h1 {
+  font-weight: 900;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+h5,
+p,
+li {
+  font-weight: 400;
+}
+
+a {
+  color: #E74530;
+  &:hover,
+  &.active {
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  cursor: default;
+}
+
+p.code {
+  font-family: fira-mono, monospace;
+  font-style: normal;
+  font-weight: 400;
+  color: blue;
+}
