@@ -1,22 +1,37 @@
 .scroll-snap {
   scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100vw);
-    scroll-snap-type: x mandatory;
-    display: flex;
-    overflow-x: scroll;
-    height: 100%;
+  scroll-snap-points-y: repeat(100vw);
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: scroll;
+  height: 100%;
 }
+
 section {
   min-width: 100vw;
-    height: 100%;
-    scroll-snap-align: start;
+  height: 100%;
+  scroll-snap-align: start;
   height: -webkit-fill-available;
-  height: auto;
-  padding: 2em 0;
+  // height: auto;
+  // padding: 2em 0;
 
   @media (max-width: 768px) {
     &:not(.landing) {
       display: none;
+    }
+  }
+
+  &.landing {
+    position: relative;
+    .random {
+      width: 80%;
+      margin: 0 auto;
+      &:not(#random){
+        pointer-events: none;
+
+      }
+      
+
     }
   }
 
@@ -64,26 +79,32 @@ section {
       }
     }
   }
-    &.design {
-      // background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 1540'%3e%3cfilter id='b'%3e%3cfeGaussianBlur stdDeviation='12' /%3e%3c/filter%3e%3cpath fill='%2397857b' d='M0 0h1275v1540H0z'/%3e%3cg filter='url(%23b)' transform='translate(3 3) scale(6.01563)' fill-opacity='.5'%3e%3cellipse fill='%232959ff' cx='188' cy='78' rx='93' ry='93'/%3e%3cellipse fill='%2371ff59' cx='37' cy='127' rx='158' ry='44'/%3e%3cellipse fill='%23ff260e' rx='1' ry='1' transform='matrix(13.04888 -49.81189 66.9412 17.53613 40 33.8)'/%3e%3cellipse fill='%23c4fb00' cx='172' cy='213' rx='68' ry='46'/%3e%3cpath fill='%23bf00ea' d='M.5 252v-82h105v82z'/%3e%3cellipse fill='%23a8ff07' rx='1' ry='1' transform='rotate(-31.3 251.5 -20.9) scale(48.41707 41.90074)'/%3e%3cellipse fill='%235400c3' cx='159' cy='31' rx='56' ry='56'/%3e%3cellipse fill='%2347c7e2' rx='1' ry='1' transform='matrix(69.29305 -15.08182 9.03215 41.49799 154.4 127.8)'/%3e%3c/g%3e%3c/svg%3e");
-      background-size: cover;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .flex {
-        width: 100px;
-        justify-content: space-around;
-        svg {
-          width: 30px;
-          height: 30px;
-        }
+
+  &.design {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .flex {
+      width: 100px;
+      justify-content: space-around;
+
+      svg {
+        width: 30px;
+        height: 30px;
       }
     }
+  }
 
-    &.personal {
-      display: none;
+  &.contact {
+    position: relative;
+    background: $blue;
+    .spin-container {
+      position: absolute;
     }
   }
+
+  &.personal {
+    display: none;
+  }
+}

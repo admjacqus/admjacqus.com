@@ -17,22 +17,6 @@ $(function() {
 
 });
 
-var myArray = [
-    "https://res.cloudinary.com/dsvt6q8vh/image/upload/v1549208806/11-12/Designs_Lookbook_2012-14.jpg",
-    "https://res.cloudinary.com/dsvt6q8vh/image/upload/v1549208803/11-12/Designs_Lookbook_2012-20.jpg",
-    "https://res.cloudinary.com/dsvt6q8vh/image/upload/v1549208796/11-12/Designs_Lookbook_2012-13.jpg",
-    "https://res.cloudinary.com/dsvt6q8vh/image/upload/v1549208790/11-12/Designs_Lookbook_2012-16.jpg",
-    "https://res.cloudinary.com/dsvt6q8vh/image/upload/v1549209421/11-12/colummash-pinkrobot.png",
-    "https://res.cloudinary.com/dsvt6q8vh/image/upload/v1549208769/11-12/Designs_Lookbook_2012-11.jpg","https://res.cloudinary.com/dsvt6q8vh/image/upload/v1549208743/11-12/Designs_Lookbook_2012-02.jpg","https://res.cloudinary.com/dsvt6q8vh/image/upload/v1549208753/11-12/Designs_Lookbook_2012-09.jpg","https://res.cloudinary.com/dsvt6q8vh/image/upload/v1549208793/11-12/Designs_Lookbook_2012-10.jpg","https://res.cloudinary.com/dsvt6q8vh/image/upload/v1549209298/11-12/eddiesTORM.png","https://res.cloudinary.com/dsvt6q8vh/image/upload/v1549209413/11-12/colummash-y-01.png"
-  ];
-  
-
-$('img.random').click(function(){
-  var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
-
-    $('img.random').attr('src', randomItem );
-    return false;
-});
 
 // $('section.sites ul li a:not(.link)').hover(
 //     function () {

@@ -51,6 +51,7 @@ a#close {
 
   transform: scale3d(0,0,1);
 transition: all .4s ease;
+transition-delay: .4s;
 
   &:hover {
     text-decoration: none;
@@ -78,3 +79,18 @@ transition: all .4s ease;
     }
   }
 }
+
+
+
+
+
+
+.window {
+
+  transition: background-color 0s, transform .5s;
+  transition-timing-function: ease;
+
+
+}
+
+
