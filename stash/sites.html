@@ -1,0 +1,135 @@
+&.sites { // background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%,
+#fecfef 100%); padding: 0 1em 5%; min-height: 100vh; .wrap { display: flex;
+align-items: flex-end; min-height: 88vh; img { max-width: 70vw; padding: 0; }
+@media (max-aspect-ratio: 1/1) { flex-direction: column; align-items: center;
+justify-content: center; margin-top: 20vh; min-height: 0; img { max-width: 90vw;
+margin-bottom: 1em; } } ul.top { position: absolute; list-style: square; li {
+font-size: 14px; } } img { height: auto; width: auto; max-height: 70vh; } } }
+
+<div class="flex">
+  <div>
+    <h4>recent web dev projects</h4>
+    <p>hover a link to preview or click to see the full site.</p>
+    <p></p>
+    <ul class="top">
+      <li>
+        <a data-filename="site1" href="https://blog.missguided.co.uk/"
+          >babeZine</a
+        >
+      </li>
+
+      <li>
+        <a
+          data-filename="site2"
+          href="https://www.missguided.co.uk/campaign/make-herstory"
+          >#makeherstory</a
+        >
+      </li>
+      <li>
+        <a
+          data-filename="site3"
+          href="https://www.missguided.co.uk/campaign/madison-beer"
+          >madison beer</a
+        >
+      </li>
+      <li>
+        <a
+          data-filename="site6"
+          href="https://www.missguided.co.uk/campaign/keep-on-being-you"
+          >#keeponbeingyou</a
+        >
+      </li>
+      <li>
+        <a
+          data-filename="site4"
+          href="https://www.missguided.co.uk/universe/lookbook/love-thyself"
+          >love thyself</a
+        >
+      </li>
+      <li>
+        <a data-filename="site5" href="https://www.missguided.co.uk/londunn"
+          >londunn</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrap">
+  <img id="site-preview" src="" alt="" />
+
+  <div id="modal">
+    <div class="site1">
+      <h5>Missguided's blog theme.</h5>
+      <p class="code">PHP, HTML, JS, SASS</p>
+      <p>
+        One of my favourite ongoing projects, which began in 2016, and has
+        continuinly grown into a really successful, profitable, much loved blog.
+        It's tested my web development skills and helped me to learn alot about
+        PHP, caching, performance and UX.
+      </p>
+      <p>
+        One of it's best features is a custom shortcode which can go and grab
+        products from the site, and display them in a post. It's easy to use
+        whilst providing opts and caching.
+      </p>
+      <ul>
+        <li>
+          <a class="link" href="https://github.com/admjacqus/BabeZine-Theme"
+            >check it out on github</a
+          >
+        </li>
+        <li>
+          <a class="link" href="https://app.atomic.io/project/1bDBMN-babezine"
+            >see my interactive mock-ups here</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="site2">
+      <h5>#makeherstory</h5>
+      <p class="code">HTML, JS, SASS</p>
+      <p>
+        We teamed up with GIRLS OUT LOUD, who help inspire confidence in girls
+        through coaching and mentoring. with the mission his campaign had such a
+        good response, it was great to see tweets and facebook statuses from
+        women feeling empowered.
+      </p>
+      <a href="https://twitter.com/hashtag/makeherstory?lang=en"
+        >#makeherstory on twitter</a
+      >
+    </div>
+    <div class="site3">
+      <h5>madison beer</h5>
+      <p class="code">HTML, JS, SASS</p>
+      <p>
+        A fun collaboration project with Madison Beer, web design by Hollie
+        Cookson. I think
+        <a href="https://www.misspap.co.uk/ferne-mccann-campaign/"
+          >"Miss Pap"</a
+        >
+        liked this one too.
+      </p>
+    </div>
+    <div class="site6">
+      <h5>KEEP ON BEING YOU</h5>
+      <p class="code">HTML, JS, SASS</p>
+      <p>
+        shit tonnes of content, but Hollie came through with a really nice
+        design for this campaign.
+      </p>
+    </div>
+    <div class="site4">
+      <h5>love thyself</h5>
+      <p class="code">HTML, JS, SASS</p>
+      <p>
+        a pretty standard lookbook for Missguided, I love using flexbox and SASS
+        for these projects.
+      </p>
+    </div>
+    <div class="site5">
+      <h5>londunn</h5>
+      <p class="code">HTML, SASS, JS</p>
+    </div>
+  </div>
+</div>

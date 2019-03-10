@@ -1,22 +1,22 @@
-$('nav.big-menu li a').hover(
-    function () {
-        //we get our current filename and use it for the src
-        var linkIndex = $(this).attr("data-filename");
-        $(this).addClass('hover');
-        $('#menu-preview').attr('src', 'images/' + linkIndex + '.jpg');
-    },
-    function () {
-        $(this).removeClass('hover');
-        $('.box img').attr('src', 'default.jpg');
-    }
+$("nav.big-menu li a").hover(
+  function() {
+    //we get our current filename and use it for the src
+    var linkIndex = $(this).attr("data-filename");
+    $(this).addClass("hover");
+    $("#menu-preview").attr("src", "images/" + linkIndex + ".jpg");
+  },
+  function() {
+    $(this).removeClass("hover");
+    $(".box img").attr("src", "default.jpg");
+  }
 );
 
 $(function() {
-    $('body').addClass('ready');
-    // console.log( "ready!" );
+  $("body").addClass("ready");
+  // console.log( "ready!" );
 
+  // cloudinary.imageTag('coffee_cup_st.jpg', {effect: "style_transfer", overlay: new cloudinary.Layer().publicId("davinci_mona_lisa"), signUrl: true}).toHtml();
 });
-
 
 // $('section.sites ul li a:not(.link)').hover(
 //     function () {
@@ -45,8 +45,8 @@ $.cloudinary.responsive();
 //     document.getElementById("random").style.backgroundImage = bigSize[random];
 // }
 
-$(".hi").click(function () {
-    // alert("Handler for .click() called.");
-    $('.window').toggleClass("active");
-    $('a#close').toggleClass("active");
+$(".hi").click(function() {
+  // alert("Handler for .click() called.");
+  $(".window").toggleClass("active");
+  $("a#close").toggleClass("active");
 });
