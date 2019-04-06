@@ -14,7 +14,7 @@ section {
   max-height: 100vh;
   overflow-y: none;
   scroll-snap-align: start;
-  height: -webkit-fill-available;
+  height: stretch;
   height: auto;
   padding: 2em 0;
 

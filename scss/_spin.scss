@@ -16,23 +16,22 @@
     fill: $white;
 
     &.big {
-      animation: spin 4500ms linear 1000ms infinite reverse forwards
+      animation: spin 4500ms linear 1000ms infinite reverse forwards;
     }
 
     &.lil {
       padding: 25%;
-      animation: spin 48000ms linear 1000ms infinite forwards
+      animation: spin 48000ms linear 1000ms infinite forwards;
     }
   }
-
 }
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
 
   100% {
-    transform: rotate(-360deg)
+    transform: rotate(-360deg);
   }
 }

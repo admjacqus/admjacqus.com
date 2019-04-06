@@ -6,8 +6,7 @@
   left: 0;
   opacity: 0;
   transition: opacity ease-in-out 1s;
-  transform: scale(0);
-  transition: background-color 0s, transform 0.5s 1s;
+  transition: background-color 0s, opacity 0.5s;
   transition-timing-function: ease;
   width: 100%;
   height: 100vh;
@@ -15,9 +14,9 @@
   padding: 0;
   z-index: 9;
   overflow: hidden;
+
   &.active {
     opacity: 1;
-    transform: scale(1);
   }
 }
 
@@ -65,9 +64,4 @@ a#close {
       background-color: transparent;
     }
   }
-}
-
-.window {
-  transition: background-color 0s, transform 0.5s;
-  transition-timing-function: ease;
 }

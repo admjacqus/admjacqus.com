@@ -1,4 +1,4 @@
-.layer-navigation {
+.blurfade {
   font-size: 1.8vw;
   line-height: 1.45em;
   position: fixed;
@@ -9,22 +9,15 @@
   z-index: 4;
   overflow: hidden;
   transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 2s;
-  // left: -5vw;
-  /* opacity: 0; */
-
-  @media (max-width: 1050px) {
-    // position: fixed;
-    opacity: 1;
-    width: auto;
-    right: 0;
-    left: 0;
-    background: radial-gradient(
-      ellipse at -15vw -50vw,
-      #ebc1c1 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    animation: gradient 5000ms infinite;
-  }
+  width: auto;
+  right: 0;
+  left: 0;
+  background: radial-gradient(
+    ellipse at -15vw -50vw,
+    #ebc1c1 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: gradient 5000ms infinite;
 }
 
 @keyframes gradient {
@@ -34,43 +27,6 @@
 
   100% {
     filter: hue-rotate(360deg);
-  }
-}
-
-.layer-navigation.moved {
-  opacity: 1;
-}
-
-.layer-navigation:after {
-  content: "";
-  position: absolute;
-  right: -1px;
-  top: 0;
-  bottom: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
-  // width: 100vw;
-}
-
-@media (max-width: 1050px) {
-  .layer-navigation:after {
-    display: none;
-  }
-}
-
-.layer-navigation:before {
-  content: "";
-  position: absolute;
-  left: -1px;
-  top: 0;
-  bottom: 0;
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-  // width: 25vw;
-  z-index: 4;
-}
-
-@media (max-width: 1050px) {
-  .layer-navigation:before {
-    display: none;
   }
 }
 
@@ -114,38 +70,4 @@
     RGBA(240, 116, 1, 1) 0%,
     RGBA(255, 255, 255, 0) 50%
   );
-}
-
-.marks {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  pointer-events: none;
-}
-
-.marks {
-  position: absolute;
-  cursor: default;
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 200px;
-  height: 200px;
-  font-size: 2.5vw;
-  text-align: center;
-  color: #fff;
-  font-weight: 500;
-  background: radial-gradient(
-    ellipse at center center,
-    RGBA(255, 255, 255, 0.8) 0%,
-    RGBA(255, 255, 255, 0) 50%
-  );
-  //   mix-blend-mode: overlay;
-
-  animation: markFadeOut 5000ms;
-  opacity: 0;
 }
