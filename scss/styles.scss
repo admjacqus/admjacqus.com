@@ -2,8 +2,6 @@ body {
   font-family: "termina", sans-serif;
   font-style: normal;
   font-size: 12px;
-  height: 100vh;
-  overflow-y: hidden;
   * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -29,21 +27,15 @@ img {
 @import "_blurfade.scss";
 @import "_spin.scss";
 
-
-
-
-
 .hide-on-mob {
   display: block;
-  @media (max-width: 768px) {   
-      display: none;
-   
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 .hide-on-desk {
   display: none;
   @media (max-width: 768px) {
-      display: block;
-   
+    display: block;
   }
 }

@@ -1,49 +1,84 @@
-.scroll-snap {
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vw);
-  scroll-snap-type: x mandatory;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-
-  height: 100%;
-}
-
-section {
-  min-width: 100vw;
-  max-height: 100vh;
-  overflow-y: none;
-  scroll-snap-align: start;
-  height: stretch;
-  height: auto;
-  padding: 2em 0;
-
-  &.landing {
-    position: relative;
-    .random {
-      max-width: 90%;
-      margin: 0 auto;
-      &:not(#random) {
-        pointer-events: none;
+// header
+.header {
+  width: 65%;
+  padding-top: 35vh;
+  padding-left: 12%;
+  padding-bottom: 15%;
+  // min-height: 100vh;
+  .header-content {
+    text-align: right;
+    padding: 1em;
+    h1 {
+      // font-size: 5vw;
+      color: white;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+      @media (max-width: 768px) {
+        font-size: 10vw;
       }
     }
   }
+}
 
-  &.showcase {
-    position: relative;
-    border: red dashed 2px;
-    min-width: 2500px;
-    img {
-      position: absolute;
-      max-width: 30vw;
+.fixxer {
+  // min-height: 100vh;
+  width: 100%;
+  &.fixed {
+    position: fixed;
+    top: 0;
+    .project-section {
+      background: lightblue;
     }
   }
-
-  &.contact {
-    position: relative;
-    background: $blue;
-    .spin-container {
-      position: absolute;
-    }
+  &.set {
+    position: absolute;
   }
+}
+.fakeholder {
+  position: relative;
+  // height: 1000px;
+}
+
+//projects
+.project-section {
+  position: relative;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 80vh;
+
+  padding-top: calc((100vh - 80vh) / 2);
+  padding-bottom: 16vh;
+  padding-left: 18.33333333%;
+}
+.project {
+  width: 65vw;
+  // width: 300px;
+  // min-height: 500px;
+  height: 50vh;
+  max-width: 600px;
+  float: left;
+  // margin-right: 5vw;
+  img {
+    width: auto;
+  }
+}
+// .clear {
+//   &:before {
+//     content: "";
+//     display: table;
+//   }
+//   &::after {
+//     content: "";
+//     display: table;
+//     clear: both;
+//   }
+// }
+.section-title {
+  position: absolute;
+}
+
+.contact {
+  position: relative;
+  padding: 50vh 100px;
+  // height: 1200px;
 }
