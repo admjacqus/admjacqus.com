@@ -52,27 +52,15 @@
 }
 .project {
   width: 65vw;
-  // width: 300px;
-  // min-height: 500px;
   height: 50vh;
   max-width: 600px;
   float: left;
-  // margin-right: 5vw;
+  margin-right: 5vw;
   img {
     width: auto;
   }
 }
-// .clear {
-//   &:before {
-//     content: "";
-//     display: table;
-//   }
-//   &::after {
-//     content: "";
-//     display: table;
-//     clear: both;
-//   }
-// }
+
 .section-title {
   position: absolute;
 }

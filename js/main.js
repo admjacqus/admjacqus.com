@@ -30,7 +30,7 @@ function sizeProjects() {
     $(".project-scroller")
       .children()
       .each(function(i) {
-        projectsW += $(this).width();
+        projectsW += $(this).outerWidth(true);
         $(this).addClass("project-" + i);
       });
 
@@ -58,11 +58,14 @@ var winT = $(window).scrollTop();
 
 function scrollMe() {
   // console.log("scrolling...");
-  console.log("wintT:" + winT + ", < fixxerT:" + fixxerT);
+
   if ($(window).width() >= 768) {
     winT = $(window).scrollTop();
+    console.log("wintT:" + winT + ", < fixxerT:" + fixxerT);
 
     if (winT >= fixxerT) {
+      console.log("fixed the scroller...");
+
       var delta = winT - fixxerT;
 
       fixxer.addClass("fixed");
@@ -75,18 +78,9 @@ function scrollMe() {
         transform: "translate3d(-" + delta + "px,0,0)"
       });
 
-      console.log(
-        "wintT:" +
-          winT +
-          ", > fixxerT:" +
-          fixxerT +
-          ", !> ProjectsW:" +
-          projectsW +
-          ". The delta is:" +
-          delta
-      );
+      // console.log("The delta is:" + delta + ", !> ProjectsW:" + projectsW);
 
-      if (delta > 1600) {
+      if (delta >= projectsW / 1.45) {
         console.log("scrolled all projects @" + delta);
         fixxer.removeClass("fixed");
         fixxer.addClass("set");
@@ -97,21 +91,6 @@ function scrollMe() {
           top: 1600 + "px"
         });
 
-        $(".project-scroller").css({
-          "-webkit-transform": "translate3d(0px,0,0)",
-          "-moz-transform": "translate3d(0px,0,0)",
-          "-ms-transform": "translate3d(0px,0,0)",
-          "-o-transform": "translate3d(0px,0,0)",
-          transform: "translate3d(0px,0,0)"
-        });
-      } else {
-        fixxer.removeClass("set");
-        fixxer.addClass("fixed");
-      }
-
-      if (winT >= projectsW) {
-        console.log("scrolled through all projects");
-
         // $(".project-scroller").css({
         //   "-webkit-transform": "translate3d(0px,0,0)",
         //   "-moz-transform": "translate3d(0px,0,0)",
@@ -119,16 +98,33 @@ function scrollMe() {
         //   "-o-transform": "translate3d(0px,0,0)",
         //   transform: "translate3d(0px,0,0)"
         // });
-        // fixxer.removeClass("fixed");
-        // alert("or else!");
-
-        // fixxer.removeClass("fixed");
-        // fixxer.addClass("set");
-        // fixxer.css({
-        //   top: winT - fixxerT + "px"
-        // });
+      } else {
+        console.log("delta < projectW");
+        fixxer.removeClass("set");
+        fixxer.addClass("fixed");
       }
+
+      // if (winT >= projectsW) {
+      //   console.log("scrolled through all projects");
+
+      //   $(".project-scroller").css({
+      //     "-webkit-transform": "translate3d(0px,0,0)",
+      //     "-moz-transform": "translate3d(0px,0,0)",
+      //     "-ms-transform": "translate3d(0px,0,0)",
+      //     "-o-transform": "translate3d(0px,0,0)",
+      //     transform: "translate3d(0px,0,0)"
+      //   });
+      //   fixxer.removeClass("fixed");
+
+      //   // fixxer.removeClass("fixed");
+      //   // fixxer.addClass("set");
+      //   // fixxer.css({
+      //   //   top: winT - fixxerT + "px"
+      //   // });
+      // }
     } else {
+      // alert("or else!");
+
       // scrolling uptime, past the projects
       fixxer.removeClass("fixed");
       fixxer.css({
